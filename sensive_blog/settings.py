@@ -12,7 +12,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", [])
 
 SECRET_KEY = env.str("SECRET_KEY", "REPLACE_ME")
 
-DEBUG = env.bool("DEBUG", True)
+DEBUG = env.bool("DEBUG", False)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -92,16 +92,23 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = os.getenv('STATIC_URL', '/static/')
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
-
-MEDIA_ROOT = os.getenv("MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
+STATICFILES_DIRS = ['/media/fox/DATA/WORK/GIT/olya-frontend/']
 
 STATIC_ROOT = os.getenv("STATIC_ROOT")
+
+STATIC_URL = os.getenv('STATIC_URL', '/static/')
+
+MEDIA_ROOT = os.getenv("MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
 
 MEDIA_URL = os.getenv('MEDIA_URL', '/media/')
 
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+print('STATIC_URL', STATIC_URL)
+print('STATIC_ROOT', STATIC_ROOT)
+print('STATICFILES_DIRS', STATICFILES_DIRS)
+
