@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block title %}
+
 <title>Sensive Blog - Home</title>
+
 {% endblock %}
 
 {% block content %}
@@ -31,9 +33,9 @@
               <div class="card blog__slide text-center">
                 <div class="blog__slide__img">
                   {% if popular_post.image_url %}
-                    <img class="card-img rounded-0" src="{{ popular_post.image_url }}" alt="">
+                    <img class="card-img rounded-0" src="{{ popular_post.image_url }}" alt="Post image">
                   {% else %}
-                    <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="">
+                    <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="Default post image">
                   {% endif %}
                 </div>
                 <div class="blog__slide__content">
@@ -59,9 +61,9 @@
             <div class="single-recent-blog-post">
               <div class="thumb">
                 {% if fresh_post.image_url %}
-                  <img class="img-fluid" src="{{ fresh_post.image_url }}" alt="">
+                  <img class="img-fluid" src="{{ fresh_post.image_url }}" alt="Post image">
                 {% else %}
-                  <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                  <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Default post image">
                 {% endif %}
                 <ul class="thumb-info" style="max-width: 550px;">
                   <li><a href="{% url 'post_detail' fresh_post.slug %}"><i class="ti-user"></i>{{fresh_post.author}}</a></li>
@@ -79,26 +81,26 @@
 
             <div class="row">
               <div class="col-lg-12">
-                  <nav class="blog-pagination justify-content-center d-flex">
-                      <ul class="pagination">
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Previous">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-left"></i>
-                                  </span>
-                              </a>
-                          </li>
-                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                          <li class="page-item"><a href="#" class="page-link">2</a></li>
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Next">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-right"></i>
-                                  </span>
-                              </a>
-                          </li>
-                      </ul>
-                  </nav>
+                <nav class="blog-pagination justify-content-center d-flex">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="ti-angle-left"></i>
+                        </span>
+                      </a>
+                    </li>
+                      <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                      <li class="page-item"><a href="#" class="page-link">2</a></li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" aria-label="Next">
+                          <span aria-hidden="true">
+                            <i class="ti-angle-right"></i>
+                          </span>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
               </div>
             </div>
           </div>
