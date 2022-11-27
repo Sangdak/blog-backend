@@ -92,8 +92,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
-
 STATICFILES_DIRS = ['/media/fox/DATA/WORK/GIT/olya-frontend/']
 
 STATIC_ROOT = os.getenv("STATIC_ROOT")
@@ -107,8 +105,3 @@ MEDIA_URL = os.getenv('MEDIA_URL', '/media/')
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
-
-print('STATIC_URL', STATIC_URL)
-print('STATIC_ROOT', STATIC_ROOT)
-print('STATICFILES_DIRS', STATICFILES_DIRS)
-
