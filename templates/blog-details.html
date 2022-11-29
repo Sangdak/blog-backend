@@ -2,11 +2,9 @@
 
 {% load static %}
 
-{% block title %}
-
-  <title>{{ post.title }} - Blog Details</title>
-
-{% endblock %}
+  {% block title %}
+    <title>{{ post.title }} - Blog Details</title>
+  {% endblock %}
 
 {% block content %}
 
@@ -34,13 +32,11 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="main_blog_details">
-
             {% if post.image_url %}
               <img class="img-fluid" src="{{ post.image_url }}" alt="Post image">
             {% else %}
               <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Default post image">
             {% endif %}
-
             <h4>{{ post.title }}</h4>
               <div class="user_details">
                 <div class="mt-sm-0 mt-3">

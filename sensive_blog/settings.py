@@ -92,7 +92,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATICFILES_DIRS = ['/media/fox/DATA/WORK/GIT/olya-frontend/']
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
 
 STATIC_ROOT = os.getenv("STATIC_ROOT")
 
